@@ -11838,9 +11838,11 @@ div#notebook {
 <li><p>Then squared difference term becomes</p>
 <p>$$\lVert\Phi_u(\mathbf{x}) - \Psi_v(\mathbf{x})\rVert^2</p>
 
-<pre><code>  = \sum_i\left(\Psi_{u,i}(\mathbf{x}) - \Psi_{v,i}(\mathbf{x})\right)^2
-  \\ = \sum_{i=1}^{2}\left((\Phi_{u,i}(\mathbf{x}) - u_i)  - (\Phi_{v,i}(\mathbf{x}) - v_i)\right)^2
-  + \sum_{i=3}^{d}\left(\Phi_{u,i}(\mathbf{x})  - \Phi_{v,i}(\mathbf{x})\right)^2$$</code></pre>
+<pre><code>  = \sum_i\left(\Psi_{u,i}(\mathbf{x}) - \Psi_{v,i}(\mathbf{x})\right)^2 $$
+</code></pre>
+<p>$$ = \sum<em>{i=1}^{2}\left((\Phi</em>{u,i}(\mathbf{x}) - u<em>i)  - (\Phi</em>{v,i}(\mathbf{x}) - v_i)\right)^2</p>
+
+<pre><code>  + \sum_{i=3}^{d}\left(\Phi_{u,i}(\mathbf{x})  - \Phi_{v,i}(\mathbf{x})\right)^2$$</code></pre>
 </li>
 <li><p>Thus the kernel can be expressed as the product of a geometric part and an appearance part</p>
 </li>
