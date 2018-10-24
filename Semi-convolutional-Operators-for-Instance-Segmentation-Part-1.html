@@ -11835,17 +11835,11 @@ div#notebook {
 <p>$$K(u, v) = \exp\left(-\frac{\lVert\Psi_u(\mathbf{x}) - \Psi_v(\mathbf{x})\rVert^2}{2}\right)$$</p>
 <ul>
 <li>Suppose that $\Phi_u(\mathbf{x})$ is made to be $d$ dimensional (with $u$ padded with $d-2$ zeros for the addition step).</li>
-<li><p>Then squared difference term becomes</p>
-<p>$$\lVert\Phi_u(\mathbf{x}) - \Psi_v(\mathbf{x})\rVert^2</p>
-
-<pre><code>  = \sum_i\left(\Psi_{u,i}(\mathbf{x}) - \Psi_{v,i}(\mathbf{x})\right)^2 $$
-</code></pre>
-<p>$$ = \sum<em>{i=1}^{2}\left((\Phi</em>{u,i}(\mathbf{x}) - u<em>i)  - (\Phi</em>{v,i}(\mathbf{x}) - v_i)\right)^2</p>
-
-<pre><code>  + \sum_{i=3}^{d}\left(\Phi_{u,i}(\mathbf{x})  - \Phi_{v,i}(\mathbf{x})\right)^2$$</code></pre>
-</li>
-<li><p>Thus the kernel can be expressed as the product of a geometric part and an appearance part</p>
-</li>
+<li>Then squared difference term becomes</li>
+</ul>
+<p>$$\lVert\Phi_u(\mathbf{x}) - \Psi_v(\mathbf{x})\rVert^2 = \sum_i\left(\Psi_{u,i}(\mathbf{x}) - \Psi_{v,i}(\mathbf{x})\right)^2 \\= \sum_{i=1}^{2}\left((\Phi_{u,i}(\mathbf{x}) - u_i)  - (\Phi_{v,i}(\mathbf{x}) - v_i)\right)^2 + \sum_{i=3}^{d}\left(\Phi_{u,i}(\mathbf{x})  - \Phi_{v,i}(\mathbf{x})\right)^2$$</p>
+<ul>
+<li>Thus the kernel can be expressed as the product of a geometric part and an appearance part</li>
 </ul>
 <p>$$K(u, v) = \exp\left(-\frac{\lVert(\Phi_u^g(\mathbf{x}) - u)  - (\Phi_v^g(\mathbf{x}) - v)\rVert^2}{2}\right)\exp\left(-\frac{\lVert\Phi_u^a(\mathbf{x})  - \Phi_v^a(\mathbf{x})\rVert^2}{2}\right)$$</p>
 <ul>
