@@ -11854,6 +11854,25 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Kernels-in-practice">Kernels in practice<a class="anchor-link" href="#Kernels-in-practice">&#182;</a></h3><ul>
+<li><p>In practice however we use the following kernel which is Laplacian rather than Gaussian, making use of the the Euclidean distance rather than mean-squared distance between the vectors:</p>
+<p>$$K_{\sigma}(u, v) = \exp\left(-\frac{\lVert\Psi_u(\mathbf{x}) - \Psi_v(\mathbf{x})\rVert}{\sigma}\right)$$</p>
+</li>
+<li><p>Here the parameter $\sigma$ is learnable.</p>
+</li>
+<li>The reason for this change is that the elements of $\Psi_u(\mathbf{x})$ should be rescaled before comparison in order to balance the spatial and the appearance parts.</li>
+<li>However since $ \Psi_u(\mathbf{x}) =  \Phi_u(\mathbf{x}) +  u = c_k$, the scale of the spatial part is implicitly defined since it should be on the order of $u$</li>
+<li>The parameter $\sigma$ controls the scale of the the Euclidean distance </li>
+<li>Since the Euclidean distance is smaller than the squared distance for a more distant point this kernel is also more robust to outliers (perhaps points in an irregularly shaped object)</li>
+</ul>
+
+</div>
+</div>
+</div>
     </div>
   </div>
 </body>
