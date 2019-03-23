@@ -1,7 +1,8 @@
 var lists = document.getElementsByTagName('ul')
 ulArray = Array.from(lists)
 sortArray = function(ul){
-  x = ul.getElementsByTagName('li');
+  childNodes = Array.from(ul.childNodes);
+  x = childNodes.filter(function(x){return x.tagName == 'LI';});
   y = Array.from(x);
   y.sort(
     function(a, b){
